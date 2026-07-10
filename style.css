@@ -1,6 +1,6 @@
 :root {
   --accent: #FF2B49;
-  --text: #110F0D;
+  --text: #292725;
   --bg: #fafafa;
 }
 
@@ -18,6 +18,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
   min-height: 100vh;
@@ -26,13 +27,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-a:hover,
-a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  opacity: 0.75;
+  transition: color 0.2s ease;
 }
 
 .page {
@@ -50,17 +45,11 @@ a:focus-visible {
 
 .logo {
   margin: 0;
-  font-size: 28px;
-  font-weight: 400;
+  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
   letter-spacing: -0.5px;
-}
-
-.logo .very {
-  font-weight: 700;
-}
-
-.logo .ape {
-  font-weight: 400;
+  color: var(--text);
 }
 
 .claim {
@@ -78,6 +67,11 @@ a:focus-visible {
   color: var(--accent);
 }
 
+.services li a:hover,
+.services li a:focus-visible {
+  color: var(--text);
+}
+
 .notice {
   color: var(--accent);
   margin: 0 0 24px;
@@ -91,7 +85,12 @@ a:focus-visible {
   display: inline-block;
   margin: 0 0 32px;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 400;
+}
+
+.kontakt:hover,
+.kontakt:focus-visible {
+  color: var(--accent);
 }
 
 .label {
@@ -109,6 +108,11 @@ a:focus-visible {
   color: var(--text);
 }
 
+.portfolio li a:hover,
+.portfolio li a:focus-visible {
+  color: var(--accent);
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -119,6 +123,11 @@ footer a {
   color: var(--text);
 }
 
+footer a:hover,
+footer a:focus-visible {
+  color: var(--accent);
+}
+
 .legal-body {
   margin: 24px 0 32px;
   color: var(--text);
@@ -126,7 +135,13 @@ footer a {
 
 .legal-body h2 {
   font-size: 16px;
+  font-weight: 400;
   margin: 24px 0 8px;
+}
+
+.legal-body a:hover,
+.legal-body a:focus-visible {
+  color: var(--accent);
 }
 
 .back {
@@ -135,13 +150,18 @@ footer a {
   color: var(--accent);
 }
 
+.back:hover,
+.back:focus-visible {
+  color: var(--text);
+}
+
 @media (min-width: 900px) {
   .content {
     max-width: 460px;
   }
 
   .logo {
-    font-size: 34px;
+    font-size: 38px;
   }
 
   body {
